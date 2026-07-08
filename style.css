@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    font-style: normal;
+
+}
+
+.size1 {
+    font-size: clamp(20px, 2.5vw, 100px); 
+    letter-spacing: 0.05em;
+}
+
+.size2 {
+    font-size: 1.2vw; 
+    letter-spacing: 0.05em;
+}
+
+.size3 {
+    font-size: clamp(17px, 2vw, 100px);
+    letter-spacing: 0.05em;
+}
+
+/*-----------ヘッダー--------------*/
+
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 9999;
+  background-color: transparent;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.nav-logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.nav-menu {
+  list-style: none;    /* ドット（・）を消す */
+  margin: 0;
+  padding: 0;
+  display: flex;       /* リンクを横並びにする */
+  gap: 30px;           /* リンクとリンクの間のスキマ */
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(12px, 2vw, 20px);
+  letter-spacing: 0.02em;
+  font-family: 'Courier New', Courier, monospace;
+  /* 色や透明度が変わるとき、0.3秒かけてヌルッと動かす */
+  transition: opacity 0.3s ease; 
+}
+
+.nav-menu:hover .nav-link {
+  opacity: 0.25;
+}
+.nav-menu .nav-link:hover {
+  opacity: 1;
+}
+main, .main-content {
+  padding-top: 100px;
+}
+
+
+
+svg {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+image {
+  width: 130%;
+  height: auto;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9 {
+  animation: img-loop 4.5s infinite steps(1);
+  opacity: 0;
+}
+
+#img1 { animation-delay: 0s; }
+#img2 { animation-delay: 0.5s; }
+#img3 { animation-delay: 1.0s; }
+#img4 { animation-delay: 1.5s; }
+#img5 { animation-delay: 2.0s; }
+#img6 { animation-delay: 2.5s; }
+#img7 { animation-delay: 3.0s; }
+#img8 { animation-delay: 3.5s; }
+#img9 { animation-delay: 4.0s; }
+
+@keyframes img-loop {
+  0% { opacity: 1; }
+  11.1% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section-1 {
+  min-height: 100vh;
+  display: flex;
+  background-color: #000000; /* ホームズを引き立てる暗い背景 */
+  position: relative;
+  height: 180vh; /* スクロールする長さを少し調整 */
+  z-index: 2; 
+}
+/* 1段目の文字 */
+.hero-title {
+  font-size: 5vw;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.hero-subtitle {
+    font-size: 1.5vw;
+    letter-spacing: 0.2em;
+    color: #cacaca;
+    text-align:left;
+    font-family: 'Courier New', monospace;
+}
+
+.hero-content {
+  position: absolute;
+  top: 5%;
+  z-index: 2; /* 数式より手前に文字を出す */
+}
+
+.scroll-trigger-box {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* ──────────────────────────────────────────────────
+   【2段目のデザイン】
+   ────────────────────────────────────────────────── */
+.section-2 {
+  position: relative;
+  padding: 25vh 0 10vh 0;
+  background-color: #05070f;
+  color: #ffffff;
+  z-index: 1;
+}
+
+
+.document-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+}
+
+
+/* 英字ラベル・タイトル */
+.uppercase-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #00ffcc;
+  letter-spacing: 0.4em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.intro-title {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* 本文テキスト・詳細テキスト */
+.intro-text p, .detailed-paragraph {
+  font-size: 1.05rem;
+  line-height: 2.2;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.detailed-paragraph strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* 中央配置の美しい引用（名言） */
+.intro-quote {
+  margin: 140px 0;
+  text-align: center;
+  position: relative;
+  padding: 50px 0;
+}
+.intro-quote::before, .intro-quote::after {
+  content: '"';
+  font-size: 4.5rem;
+  color: rgba(0, 255, 204, 0.15);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.intro-quote::before { top: -20px; }
+.intro-quote::after { bottom: -40px; }
+
+.intro-quote-text {
+  font-style: italic;
+  font-size: 2rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.intro-quote span {
+  display: block;
+  font-size: 1.0rem;
+  color: #c9c9c9;
+  font-style: normal;
+}
+
+/* 区切り線 */
+.detailed-line {
+  width: 60px;
+  height: 1px;
+  background-color: rgba(255,255,255,0.15);
+  border: none;
+  margin: 180px auto;
+}
+
+
+
+@keyframes slowFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating-element {
+
+  animation: slowFloat 4s ease-in-out infinite; 
+}
+
+
+.cases-grid .case-card:nth-child(1) {
+  animation: slowFloat 5s ease-in-out infinite;
+}
+.cases-grid .case-card:nth-child(2) {
+  animation: slowFloat 6s ease-in-out infinite;
+  animation-delay: 0.5s; /* 0.5秒ズラして動く */
+}
+.cases-grid .case-card:nth-child(3) {
+  animation: slowFloat 5.5s ease-in-out infinite;
+  animation-delay: 1s; /* 1秒ズラして動く */
+}
+
+
+
+/*----------------------------------------------------------------------------------------*/
+
+
+
+.main-content {
+  position: relative;
+  z-index: 10; /* 背景（z-index: -1）より前に配置 */
+  padding: 80px 10%;
+  max-width: 800px;
+}
+
+#math-background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  z-index: -1; 
+  
+  pointer-events: none; /* 背景の文字が邪魔でクリックできなくなるのを防ぐ */
+  
+  /* 薄い方眼紙（グリッド）の背景線を作る */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px; /* グリッドのサイズ */
+}
+
+.section-1,
+.section-2,
+.transition-trigger-zone,
+.next-section,
+.section-3-gallery,
+.section-4-profile,
+.section-5-contact {
+  background-color: transparent !important;
+}
+
+@keyframes fadeLife {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* 最初の10%の時間でクッキリ見えるようになる */
+  }
+  85% {
+    opacity: 1; /* しばらくそのままキープ */
+  }
+  100% {
+    opacity: 0; /* 最後に消える */
+  }
+}
+
+
+
+
+/* 例：緑のラベルや薄いテキストに */
+.uppercase-label, .case-meta, .form-group label {
+  /* 🛠️ 追記：文字の後ろに、ブレのない鋭い黒い影を極薄く敷く */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/*--------------------------------------------------*/
+
+
+
+/* ========================================================
+  SECTION 3
+   ======================================================== */
+.section-3-gallery {
+  background-color: #000000;
+  padding: 15vh 0;
+  color: #ffffff;
+}
+.sec3-container, .sec4-container, .sec5-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.sec-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #00ffcc;
+  letter-spacing: 0.3em;
+  margin-bottom: 10px;
+}
+.sec-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 60px;
+}
+
+/* 3列のグリッド配置 */
+.cases-grid {
+  display: flex;
+  gap: 30px;
+}
+.case-card {
+  flex: 1;
+  background-color: #05070f;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 40px 30px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.case-status {
+  display: inline-block;
+  font-size: 0.65rem;
+  background-color: rgba(0, 255, 204, 0.1);
+  color: #00ffcc;
+  padding: 3px 8px;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+}
+.case-name {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-family: "YuMincho", serif;
+}
+.case-meta {
+  font-size: 0.8rem;
+  color: #666e80;
+  margin-bottom: 20px;
+}
+.case-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #a0a5b5;
+}
+.case-card:hover {
+  transform: translateY(-10px);
+  border-color: #00ffcc;
+  box-shadow: 0 10px 30px rgba(0, 255, 204, 0.1);
+}
+
+.block-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========================================================
+   SECTION 4
+   ======================================================== */
+.section-4-profile {
+  background-color: #000000;
+  padding: 15vh 0;
+  color: #ffffff;
+}
+.profile-layout {
+  display: flex;
+  gap: 80px;
+}
+.profile-left {
+  width: 40%;
+}
+.profile-lead {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #ffffff;
+}
+.profile-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* メーターのデザイン */
+.skill-item {
+  width: 100%;
+}
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.counter-num {
+  color: #00ffcc;
+  font-weight: bold;
+}
+.skill-bar-bg {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.skill-bar-fill {
+  height: 100%;
+  background-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+  width: 0;
+  transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.skill-note {
+  display: block;
+  font-size: 1.0rem;
+  color: #e0e0e0;
+  margin-top: 8px;
+}
+
+/* 📱 レスポンシブ（スマホの時は綺麗に縦1列にする） */
+@media (max-width: 991px) {
+  .cases-grid, .profile-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .profile-left, .profile-right {
+    width: 100%;
+  }
+}
