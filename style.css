@@ -7,6 +7,8 @@ body{
     background-repeat: no-repeat;
 
     color: #ffffff;
+    width: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     margin: 0;
@@ -17,6 +19,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 10;
     font-style: normal;
+
 
 }
 
@@ -55,6 +58,7 @@ body{
   display: flex;
   justify-content: space-between; 
   align-items: center;
+  box-sizing: border-box;
 }
 
 .nav-logo {
@@ -96,13 +100,15 @@ main, .main-content {
 
 svg {
   display: block;
+  max-width: 500px;
   width: 50%;
   margin: 0 auto;
+  min-height: 150vh;
 }
 
-image {
-  width: 130%;
-  height: auto;
+svg image {
+  width: 100%;
+  height: 100%;
 }
 
 #img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9 {
@@ -143,8 +149,9 @@ section {
   display: flex;
   background-color: #000000; /* ホームズを引き立てる暗い背景 */
   position: relative;
-  height: 180vh; /* スクロールする長さを少し調整 */
+  height: 100vh; /* スクロールする長さを少し調整 */
   z-index: 2; 
+
 }
 /* 1段目の文字 */
 .hero-title {
@@ -153,6 +160,8 @@ section {
   color: #ffffff;
   text-align: center;
   font-family: 'Courier New', monospace;
+  display: block;
+  animation: pop 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero-subtitle {
@@ -161,11 +170,14 @@ section {
     color: #cacaca;
     text-align:left;
     font-family: 'Courier New', monospace;
+    display: block;
+    animation: pop 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      
 }
 
 .hero-content {
   position: absolute;
-  top: 5%;
+  top: 45%;
   z-index: 2; /* 数式より手前に文字を出す */
 }
 
@@ -179,6 +191,24 @@ section {
     align-items: center;
     overflow: hidden;
 }
+
+@keyframes pop{
+  0%{
+    opacity: 0;
+    transform: scale(4) translateY(-20px);
+    filter: blur(10px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+
+  }
+
+}
+
+
 /* ──────────────────────────────────────────────────
    【2段目のデザイン】
    ────────────────────────────────────────────────── */
@@ -287,19 +317,6 @@ section {
 .floating-element {
 
   animation: slowFloat 4s ease-in-out infinite; 
-}
-
-
-.cases-grid .case-card:nth-child(1) {
-  animation: slowFloat 5s ease-in-out infinite;
-}
-.cases-grid .case-card:nth-child(2) {
-  animation: slowFloat 6s ease-in-out infinite;
-  animation-delay: 0.5s; /* 0.5秒ズラして動く */
-}
-.cases-grid .case-card:nth-child(3) {
-  animation: slowFloat 5.5s ease-in-out infinite;
-  animation-delay: 1s; /* 1秒ズラして動く */
 }
 
 
@@ -519,4 +536,144 @@ section {
   .profile-left, .profile-right {
     width: 100%;
   }
+}
+
+
+
+.block-link {
+  text-decoration: none; /* 下線を消す */
+  color: inherit;        /* 文字色をカード本来の色（白）のままにする */
+  display: block;        /* カード全体をクリックできるようにする */
+}
+
+.archive-wrapper {
+  padding-top: 140px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+.archive-header {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.case-detail-section {
+  padding: 80px 0;
+  margin-bottom: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-margin-top: 100px;
+}
+
+.case-detail-section:last-child {
+  border-bottom: none;
+  margin-bottom: 250px;
+}
+
+.detail-status {
+  font-size: 0.8rem;
+  color: #00ffcc;
+  letter-spacing: 0.35em;
+  margin-bottom: 15px;
+  font-family: 'Courier New', monospace;
+}
+
+.detail-name {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+
+.detail-meta {
+  font-size: 0.95rem;
+  color: #7e8594;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 45px;
+  letter-spacing: 0.05em;
+}
+
+.case-image-box {
+  width: 100%;
+  height: clamp(250px, 45vh, 420px);
+  background: rgba(5, 7, 15, 0.4) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.case-detail-section:hover .case-image-box {
+  border-color: rgba(0, 255, 204, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.05);
+}
+
+.case-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+
+.case-image-box:hover img {
+  opacity: 1;
+}
+
+.detail-content {
+  font-size: 1.05rem;
+  line-height: 2.3;
+  color: #b0b5c6;
+  text-align: justify;
+}
+
+.detail-content p {
+  margin-bottom: 35px;
+}
+
+.detail-content strong {
+  color: #ffffff;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 5px;
+  letter-spacing: 0.05em;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  color: #7e8594;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 28px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  color: #00ffcc;
+  border-color: rgba(0, 255, 204, 0.5);
+  background: rgba(0, 255, 204, 0.02);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+  .archive-wrapper { padding-top: 100px; }
+  .archive-header { margin-bottom: 60px; }
+  .case-detail-section { padding: 50px 0; margin-bottom: 40px; }
+  .detail-content { font-size: 0.95rem; line-height: 2.1; }
 }
