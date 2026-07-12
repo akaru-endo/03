@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
 body{
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-
     color: #ffffff;
     width: 100%;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
     margin: 0;
     padding: 0;
     background-color: #000000;
@@ -19,27 +12,22 @@ body{
     font-optical-sizing: auto;
     font-weight: 10;
     font-style: normal;
-
-
 }
 
 .size1 {
     font-size: clamp(20px, 2.5vw, 100px); 
     letter-spacing: 0.05em;
 }
-
 .size2 {
     font-size: 1.2vw; 
     letter-spacing: 0.05em;
 }
-
 .size3 {
     font-size: clamp(17px, 2vw, 100px);
     letter-spacing: 0.05em;
 }
 
-/*-----------ヘッダー--------------*/
-
+/*ヘッダー*/
 .custom-navbar {
   position: fixed;
   top: 0;
@@ -49,7 +37,6 @@ body{
   z-index: 9999;
   background-color: transparent;
 }
-
 .nav-container {
   width: 100%;
   height: 100%;
@@ -60,32 +47,26 @@ body{
   align-items: center;
   box-sizing: border-box;
 }
-
 .nav-logo {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 0.15em;
 }
-
 .nav-menu {
-  list-style: none;    /* ドット（・）を消す */
+  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;       /* リンクを横並びにする */
-  gap: 30px;           /* リンクとリンクの間のスキマ */
+  display: flex;
+  gap: 30px;
 }
-
 .nav-link {
   color: #ffffff;
   text-decoration: none;
   font-size: clamp(12px, 2vw, 20px);
   letter-spacing: 0.02em;
   font-family: 'Courier New', Courier, monospace;
-  /* 色や透明度が変わるとき、0.3秒かけてヌルッと動かす */
-  transition: opacity 0.3s ease; 
 }
-
 .nav-menu:hover .nav-link {
   opacity: 0.25;
 }
@@ -96,16 +77,13 @@ main, .main-content {
   padding-top: 100px;
 }
 
-
-
 svg {
   display: block;
   max-width: 500px;
   width: 50%;
   margin: 0 auto;
-  min-height: 150vh;
+  min-height: 100vh;
 }
-
 svg image {
   width: 100%;
   height: 100%;
@@ -115,7 +93,6 @@ svg image {
   animation: img-loop 4.5s infinite steps(1);
   opacity: 0;
 }
-
 #img1 { animation-delay: 0s; }
 #img2 { animation-delay: 0.5s; }
 #img3 { animation-delay: 1.0s; }
@@ -132,28 +109,25 @@ svg image {
   100% { opacity: 0; }
 }
 
-
-
 section {
   position: relative;
   width: 100%;
-  min-height: 150vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
+/*index.html*/
 .section-1 {
   min-height: 100vh;
   display: flex;
-  background-color: #000000; /* ホームズを引き立てる暗い背景 */
   position: relative;
-  height: 100vh; /* スクロールする長さを少し調整 */
+  height: 100vh;
   z-index: 2; 
-
 }
-/* 1段目の文字 */
+/*------------------1つ目----------------*/
 .hero-title {
   font-size: 5vw;
   letter-spacing: 0.2em;
@@ -162,8 +136,8 @@ section {
   font-family: 'Courier New', monospace;
   display: block;
   animation: pop 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  font-weight: normal;
 }
-
 .hero-subtitle {
     font-size: 1.5vw;
     letter-spacing: 0.2em;
@@ -171,16 +145,13 @@ section {
     text-align:left;
     font-family: 'Courier New', monospace;
     display: block;
-    animation: pop 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      
+    animation: pop 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;  
 }
-
 .hero-content {
   position: absolute;
   top: 45%;
-  z-index: 2; /* 数式より手前に文字を出す */
+  z-index: 2;
 }
-
 .scroll-trigger-box {
     position: sticky;
     top: 0;
@@ -205,31 +176,22 @@ section {
     filter: blur(0);
 
   }
-
 }
 
-
-/* ──────────────────────────────────────────────────
-   【2段目のデザイン】
-   ────────────────────────────────────────────────── */
+/*-----------------2つ目-------------------*/
 .section-2 {
   position: relative;
   padding: 25vh 0 10vh 0;
-  background-color: #05070f;
   color: #ffffff;
   z-index: 1;
+  font-size: 2.0rem;
 }
-
-
 .document-container {
   max-width: 760px;
   margin: 0 auto;
   padding: 0 30px;
   position: relative;
 }
-
-
-/* 英字ラベル・タイトル */
 .uppercase-label {
   display: block;
   font-size: 0.85rem;
@@ -245,8 +207,6 @@ section {
   text-align: center;
   margin-bottom: 100px;
 }
-
-/* 本文テキスト・詳細テキスト */
 .intro-text p, .detailed-paragraph {
   font-size: 1.05rem;
   line-height: 2.2;
@@ -258,164 +218,26 @@ section {
   color: #ffffff;
   font-weight: bold;
 }
-
-/* 中央配置の美しい引用（名言） */
 .intro-quote {
   margin: 140px 0;
   text-align: center;
   position: relative;
   padding: 50px 0;
 }
-.intro-quote::before, .intro-quote::after {
-  content: '"';
-  font-size: 4.5rem;
-  color: rgba(0, 255, 204, 0.15);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.intro-quote::before { top: -20px; }
-.intro-quote::after { bottom: -40px; }
-
-.intro-quote-text {
-  font-style: italic;
-  font-size: 2rem;
-  color: #ffffff;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
 .intro-quote span {
-  display: block;
   font-size: 1.0rem;
-  color: #c9c9c9;
-  font-style: normal;
 }
-
-/* 区切り線 */
-.detailed-line {
-  width: 60px;
-  height: 1px;
-  background-color: rgba(255,255,255,0.15);
-  border: none;
-  margin: 180px auto;
-}
-
-
-
-@keyframes slowFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.floating-element {
-
-  animation: slowFloat 4s ease-in-out infinite; 
-}
-
-
-
-/*----------------------------------------------------------------------------------------*/
-
-
-
-.main-content {
-  position: relative;
-  z-index: 10; /* 背景（z-index: -1）より前に配置 */
-  padding: 80px 10%;
-  max-width: 800px;
-}
-
-#math-background {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  
-  z-index: -1; 
-  
-  pointer-events: none; /* 背景の文字が邪魔でクリックできなくなるのを防ぐ */
-  
-  /* 薄い方眼紙（グリッド）の背景線を作る */
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px; /* グリッドのサイズ */
-}
-
-.section-1,
-.section-2,
-.transition-trigger-zone,
-.next-section,
-.section-3-gallery,
-.section-4-profile,
-.section-5-contact {
-  background-color: transparent !important;
-}
-
-@keyframes fadeLife {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1; /* 最初の10%の時間でクッキリ見えるようになる */
-  }
-  85% {
-    opacity: 1; /* しばらくそのままキープ */
-  }
-  100% {
-    opacity: 0; /* 最後に消える */
-  }
-}
-
-
-
-
-/* 例：緑のラベルや薄いテキストに */
-.uppercase-label, .case-meta, .form-group label {
-  /* 🛠️ 追記：文字の後ろに、ブレのない鋭い黒い影を極薄く敷く */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-}
-
-/*--------------------------------------------------*/
-
-
-
-/* ========================================================
-  SECTION 3
-   ======================================================== */
+/*-----------------3つ目------------------*/
 .section-3-gallery {
-  background-color: #000000;
   padding: 15vh 0;
   color: #ffffff;
+  text-align: center;
 }
 .sec3-container, .sec4-container, .sec5-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 40px;
 }
-.sec-label {
-  display: block;
-  font-size: 0.8rem;
-  color: #00ffcc;
-  letter-spacing: 0.3em;
-  margin-bottom: 10px;
-}
-.sec-title {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  margin-bottom: 60px;
-}
-
-/* 3列のグリッド配置 */
 .cases-grid {
   display: flex;
   gap: 30px;
@@ -457,7 +279,6 @@ section {
   border-color: #00ffcc;
   box-shadow: 0 10px 30px rgba(0, 255, 204, 0.1);
 }
-
 .block-link {
   display: block;
   width: 100%;
@@ -465,215 +286,146 @@ section {
   color: inherit;
 }
 
-/* ========================================================
-   SECTION 4
-   ======================================================== */
-.section-4-profile {
-  background-color: #000000;
-  padding: 15vh 0;
-  color: #ffffff;
-}
-.profile-layout {
-  display: flex;
-  gap: 80px;
-}
-.profile-left {
-  width: 40%;
-}
-.profile-lead {
-  font-size: 0.95rem;
-  line-height: 1.9;
-  color: #ffffff;
-}
-.profile-right {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-}
-
-/* メーターのデザイン */
-.skill-item {
-  width: 100%;
-}
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
-}
-.counter-num {
-  color: #00ffcc;
-  font-weight: bold;
-}
-.skill-bar-bg {
-  width: 100%;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-.skill-bar-fill {
-  height: 100%;
-  background-color: #00ffcc;
-  box-shadow: 0 0 10px #00ffcc;
-  width: 0;
-  transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.skill-note {
-  display: block;
-  font-size: 1.0rem;
-  color: #e0e0e0;
-  margin-top: 8px;
-}
-
-/* 📱 レスポンシブ（スマホの時は綺麗に縦1列にする） */
 @media (max-width: 991px) {
-  .cases-grid, .profile-layout {
+  .cases-grid{
     flex-direction: column;
     gap: 40px;
   }
-  .profile-left, .profile-right {
-    width: 100%;
+}
+
+/*case.html*/
+.archive-wrapper {
+  padding-top: 120px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.case-detail-section {
+  display: block;
+  scroll-margin-top: 100px;
+  animation: fadeInUp 1.0s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-
-
-.block-link {
-  text-decoration: none; /* 下線を消す */
-  color: inherit;        /* 文字色をカード本来の色（白）のままにする */
-  display: block;        /* カード全体をクリックできるようにする */
-}
-
-.archive-wrapper {
-  padding-top: 140px;
-  max-width: 860px;
-  margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
-  box-sizing: border-box;
-}
-
-.archive-header {
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-.case-detail-section {
-  padding: 80px 0;
-  margin-bottom: 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  scroll-margin-top: 100px;
-}
-
-.case-detail-section:last-child {
-  border-bottom: none;
-  margin-bottom: 250px;
-}
-
-.detail-status {
-  font-size: 0.8rem;
-  color: #00ffcc;
-  letter-spacing: 0.35em;
-  margin-bottom: 15px;
-  font-family: 'Courier New', monospace;
-}
-
 .detail-name {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 300;
+  display: block;
+  font-size: 2rem;
+  font-weight: normal;
   color: #ffffff;
-  margin-bottom: 12px;
-  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  text-align: left;
 }
-
-.detail-meta {
-  font-size: 0.95rem;
-  color: #7e8594;
-  font-family: 'Courier New', monospace;
-  margin-bottom: 45px;
-  letter-spacing: 0.05em;
-}
-
-.case-image-box {
-  width: 100%;
-  height: clamp(250px, 45vh, 420px);
-  background: rgba(5, 7, 15, 0.4) !important;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.case-detail-section:hover .case-image-box {
-  border-color: rgba(0, 255, 204, 0.3);
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.05);
-}
-
-.case-image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.85;
-  transition: opacity 0.4s ease;
-}
-
-.case-image-box:hover img {
-  opacity: 1;
-}
-
 .detail-content {
-  font-size: 1.05rem;
-  line-height: 2.3;
-  color: #b0b5c6;
-  text-align: justify;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #cccccc;
+  text-align: left;
 }
-
 .detail-content p {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
-
 .detail-content strong {
   color: #ffffff;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 5px;
-  letter-spacing: 0.05em;
 }
 
-.back-button {
-  display: inline-block;
-  margin-top: 30px;
-  color: #7e8594;
-  text-decoration: none;
-  font-family: 'Courier New', monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 12px 28px;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
+/*-------------グリッド紙の背景------------*/
+#math-background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; 
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-.back-button:hover {
-  color: #00ffcc;
-  border-color: rgba(0, 255, 204, 0.5);
-  background: rgba(0, 255, 204, 0.02);
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);
-  transform: translateY(-2px);
+
+#grid-scanner-t {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  z-index: -1;
+  pointer-events: none;
+  animation: scanMove1 8s ease-in-out infinite; 
 }
 
-@media (max-width: 767px) {
-  .archive-wrapper { padding-top: 100px; }
-  .archive-header { margin-bottom: 60px; }
-  .case-detail-section { padding: 50px 0; margin-bottom: 40px; }
-  .detail-content { font-size: 0.95rem; line-height: 2.1; }
+#grid-scanner-l {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100vw;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  z-index: -1;
+  pointer-events: none;
+  animation: scanMove2 7s ease-in-out infinite; 
+}
+
+#grid-scanner-b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  z-index: -1;
+  pointer-events: none;
+  animation: scanMove3 7s ease-in-out infinite; 
+}
+
+#grid-scanner-r {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100vw;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  z-index: -1;
+  pointer-events: none;
+  animation: scanMove4 8s ease-in-out infinite; 
+}
+
+@keyframes scanMove1 {
+  0% { top: 0%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+@keyframes scanMove2 {
+  0% { left: 0%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+@keyframes scanMove3 {
+  0% { top: 100%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 0%; opacity: 0; }
+}
+@keyframes scanMove4 {
+  0% { left: 100%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { left: 0%; opacity: 0; }
 }

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASES ARCHIVE 事件の詳細</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="math-background"></div>
+    <div id="grid-scanner-t"></div>
+    <div id="grid-scanner-l"></div>
+    <div id="grid-scanner-b"></div>
+    <div id="grid-scanner-r"></div>
 
     <nav class="custom-navbar">
         <div class="nav-container">
@@ -16,85 +21,75 @@
                 <li class="nav-item"><a href="./index.html#" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="./index.html#portfolio" class="nav-link">Portfolio</a></li>
                 <li class="nav-item"><a href="./index.html#gallery" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="./index.html#profile" class="nav-link">Profile</a></li>
             </ul>
         </div>
     </nav>
 
-<div class="archive-wrapper">
-    
-    <header class="archive-header">
-        <h1 class="hero-title">CASES ARCHIVE</h1>
-        <p class="hero-subtitle">Detailed Investigation Reports</p>
-    </header>
-
-    <section class="case-detail-section" id="study-in-scarlet">
-        <div class="detail-status">CASE.01 // RESOLVED</div>
-        <h2 class="detail-name">緋色の研究</h2>
-        <div class="detail-meta">A Study in Scarlet / 1887</div>
-
-        <div class="case-image-box" style="width: 100%; height: 400px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 40px; display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative;">
-            <span style="color: rgba(255,255,255,0.3); font-family: 'Courier New', monospace; font-size: 0.9rem;">[ IMAGE: THE CRIME SCENE IN BRIXTON ROAD ]</span>
+    <section class="section-1" id="hero-scroll-section">
+        <div class="section-container scroll-trigger-box hero-image-content">
+            <div class="hero-content">
+                <h1 class="hero-title">CASE ARCHIVE</h1>
+            </div>
         </div>
+    </section>      
 
-        <div class="detail-content">
-            <p><strong>【事件の端緒】</strong><br>
-            物語はアフガニスタンの戦場から傷心と病を抱えて復員した軍医、ジョン・H・ワトソン博士が、ロンドンで奇妙な同居人シャーロック・ホームズと出会うことから始まる。ベーカー街221Bでの共同生活の中で、ワトソンはホームズの異常なまでの観察眼と、専門分野への極端な偏りに困惑しつつも、彼の提唱する『聖なる観察眼（The Science of Deduction）』の真偽を見極めようとしていた。</p>
-            
-            <p><strong>【禁忌の密室と血文字】</strong><br>
-            そんな折、スコットランド・ヤードのトバイアス・グレグスン刑事から一本の捜査協力依頼が舞い込む。ロンドンのブリクストン道路にある空き家で、アメリカ人の大富豪イーノック・ドレッバーが死体となって発見されたのだ。遺体には外傷が一切なく、男の顔は死の恐怖によって凄惨に歪んでいた。そして最も不可解なのは、昏い現場の壁に、被害者の血によって殴り書きされた「RACHE（ドイツ語で復讐の意）」という不気味な文字であった。</p>
-            
-            <p><strong>【ホームズの覚醒と真実】</strong><br>
-            ヤードの凡庸な刑事たちが「復讐（Rache）ではなく、レイチェル（Rachel）という女の仕業だ」と的外れな捜査を進める中、ホームズは現場の足跡、泥の性質、そして壁の文字の高さから犯人の身長や特徴をまたたく間に割り出していく。この事件の根底には、アメリカ・ユタ州の広大な砂漠から始まった、一人の美しい女性を巡る宗教的な迫害と、二十年の歳月をかけた一人の男の執念深い復讐劇が隠されていた。ホームズは「辻馬車」という盲点を利用し、ロンドン市街に潜む真犯人を鮮やかに罠へと陥れるのだった。</p>
-        </div>
-        <a href="./index.html" class="back-button">&lt; BACK TO MAIN</a>
-    </section>
+    <div class="archive-wrapper">
+        <section class="case-detail-section" id="study-in-scarlet">
+            <h2 class="detail-name">緋色の研究（1887年）</h2>
 
-    <section class="case-detail-section" id="speckled-band">
-        <div class="detail-status">CASE.02 // RESOLVED</div>
-        <h2 class="detail-name">まだらの紐</h2>
-        <div class="detail-meta">The Speckled Band / 1883 (Published 1892)</div>
+            <div class="detail-content">
+                <p><strong>【事件の端緒】</strong><br>
+                アフガニスタンの戦場から復員した軍医のワトソン博士が、風変わりな同居人シャーロック・ホームズと出会うことから始まります。ベーカー街221Bでの共同生活の中で、ワトソンはホームズの異常な観察眼と独自の推理論に驚かされていきます。</p>
+                
+                <p><strong>【密室と血文字】</strong><br>
+                ある日、ロンドンの空き家でアメリカ人の大富豪が死体となって発見されます。遺体には外傷がなく、男の顔は恐怖で歪んでいました。現場の壁には被害者の血で謎の文字「RACHE」と書き残されており、警察の捜査は難航します。</p>
+                
+                <p><strong>【真実】</strong><br>
+                ホームズは現場の足跡や泥から犯人の特徴を割り出します。この事件の背景には、アメリカの砂漠から始まった長い復讐劇が隠されていました。ホームズは辻馬車を利用した鮮やかな罠で犯人を捕らえます。</p>
+            </div>
+        </section>
 
-        <div class="case-image-box" style="width: 100%; height: 400px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 40px; display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative;">
-            <span style="color: rgba(255,255,255,0.3); font-family: 'Courier New', monospace; font-size: 0.9rem;">[ IMAGE: THE VENTILATOR IN STOKE MORAN ]</span>
-        </div>
+        <section class="case-detail-section" id="speckled-band">
+            <h2 class="detail-name">まだらの紐（1892年）</h2>
+            <div class="detail-content">
+                <p><strong>【恐怖の訪問者】</strong><br>
+                早朝のベーカー街に、恐怖に震える女性ヘレン・ストーナーが駆け込んできます。彼女は残虐な義父とともに崩れかけの邸宅で暮らしていましたが、数年前に結婚を控えた姉が謎の死を遂げた真相について悩んでいました。</p>
+                
+                <p><strong>【ダイイング・メッセージ】</strong><br>
+                姉は亡くなる直前、夜中に不気味な「口笛の音」を聞いており、間もなく「まだらの紐」という言葉を残して息絶えました。部屋は完全な密室でした。そして今、ヘレン自身も結婚を迎えることになり、姉と同じ部屋への模様替えを強制され、昨夜あの口笛を聞いたと言います。</p>
+                
+                <p><strong>【殺意の正体】</strong><br>
+                現地を調べたホームズは、どこにも通じていない不自然な通風孔や呼び鈴の紐を発見します。夜、ホームズとワトソンが密室に潜入して待ち構えていると、通風孔から毒蛇が現れます。義父が仕掛けた凶行をホームズのステッキが一蹴します。</p>
+            </div>
+        </section>
 
-        <div class="detail-content">
-            <p><strong>【恐怖の訪問者】</strong><br>
-            早朝の冷え込みが厳しいベーカー街に、全身を震わせ、実年齢よりも遥かに老け込んだ若き女性ヘレン・ストーナーが駆け込んでくる。彼女はイギリスの古い名門でありながら、今や零落し残虐な暴君と化した義父ロイロット博士とともに、崩れかけの邸宅「ストーク・モラン」で暮らしていた。ヘレンの相談内容は、二年前、結婚を数日後に控えた高潔な姉ジュリアが遂げた、あまりにも不可解で恐ろしい死の真相についてだった。</p>
-            
-            <p><strong>【密室のダイイング・メッセージ】</strong><br>
-            姉のジュリアは亡くなる直前の数夜、午前三時頃になると決まって不気味な「低い口笛の音」を耳にしていたという。そして悲劇の夜、激しい悲鳴とともに部屋から飛び出してきた姉は、暗闇の中で「まだらの紐！ヘレン、あれはまだらの紐よ！」と叫び、そのまま絶命した。部屋は完全な密室、窓のシャッターも内側から強固に閉ざされており、毒殺の形跡すら見つからなかった。そして今、ヘレン自身が結婚を迎えることになり、義父の命令でまさに「姉が亡くなったあの寝室」へと模様替えを強制され、昨夜、あの忌まわしい口笛の音を聞いたというのだ。</p>
-            
-            <p><strong>【闇に潜む殺意の正体】</strong><br>
-            現地へ急行したホームズは、奇妙な点に次々と気づく。壁に打ち付けられた偽の呼び鈴の紐、どこにも通じていない不自然な通風孔、そして床に固定されたベッド。これらはすべて、義父ロイロット博士が仕掛けた悪魔の殺人機構であった。ホームズとワトソンは死を覚悟して夜の密室に潜入し、息を潜めてその瞬間を待つ。通風孔を伝って這い降りてきた「まだらの紐」の正体は、インド産の極毒を秘めた沼マムシ。ホームズの容赦のないステッキの一撃が、悪因悪果の凄絶な結末を呼び寄せることになる。</p>
-        </div>
-        <a href="./index.html" class="back-button">&lt; BACK TO MAIN</a>
-    </section>
+        <section class="case-detail-section" id="hound-of-baskervilles">
+            <h2 class="detail-name">バスカヴィル家の犬（1902年）</h2>
+            <div class="detail-content">
+                <p><strong>【魔犬の伝説】</strong><br>
+                広大な荒野に囲まれたバスカヴィル馆には、巨大な怪物の犬に一族が呪われているという伝説がありました。当主のチャールズ卿が不審な心臓麻痺で亡くなり、その遺体の近くには巨大な猟犬の足跡が残されていました。</p>
+                
+                <p><strong>【荒野の捜査】</strong><br>
+                新当主の身を守るため、ワトソンが現地へ派遣されて警護と捜査を行います。不気味な咆哮や怪しい住人たちに翻弄される中、ホームズは実はひそかに荒野の小屋に身を潜め、単独で冷静に観察を続けていました。</p>
+                
+                <p><strong>【伝説の崩壊】</strong><br>
+                事件は遺産を狙う身内による計画的な殺人でした。犯人は本物の巨大な犬に光る物質を塗り、伝説の魔犬に見せかけていたのです。濃霧の夜、襲いかかる怪物をホームズたちの銃弾が倒し、事件は解決します。</p>
+            </div>
+        </section>
+    </div>
 
-    <section class="case-detail-section" id="hound-of-baskervilles">
-        <div class="detail-status">CASE.03 // RESOLVED</div>
-        <h2 class="detail-name">バスカヴィル家の犬</h2>
-        <div class="detail-meta">The Hound of the Baskervilles / 1902</div>
-
-        <div class="case-image-box" style="width: 100%; height: 400px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 40px; display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative;">
-            <span style="color: rgba(255,255,255,0.3); font-family: 'Courier New', monospace; font-size: 0.9rem;">[ IMAGE: THE MOOR UNDER THE MOONLIGHT ]</span>
-        </div>
-
-        <div class="detail-content">
-            <p><strong>【魔犬の呪いと奇怪な足跡】</strong><br>
-            デヴォンシャー地方の奥深くに広がる、底なしの泥沼と荒野に囲まれたバスカヴィル館。この地には、かつて極悪非道を尽くした先祖が巨大な怪物の犬に引き裂かれて以来、歴代の当主が不慮の死を遂げるという忌まわしき「魔犬の伝説」が受け継がれていた。近代的な当主であったチャールズ・バスカヴィル卿が、館の敷地内で突如として心臓麻痺により死亡する。遺体には一切の傷がなかったが、検死に立ち会ったモーティマー医師は、ホームズの部屋で恐るべき事実を告白する。遺体の数十ヤード手前には、まぎれもない「巨大な猟犬の足跡」が残されていた、と。</p>
-            
-            <p><strong>【深い霧の荒野へ】</strong><br>
-            新当主としてアメリカから帰国したヘンリー卿の身を守るため、ホームズは多忙を理由にワトソンを現地へ派遣し、自身の代わりに警護と捜査を行わせる。ワトソンが報告する日記には、脱獄囚の影、謎の剥製師ステープルトンとその美しい妹、そして夜の荒野に轟く身の毛もよだつ咆哮など、不気味な要素が錯綜していた。超自然的な怪異の前にワトソンが翻弄される中、実はホームズはロンドンに留まったと見せかけ、自らも荒野の石器時代の小屋に身を潜めて単独で冷徹な観察を続けていたのだ。</p>
-            
-            <p><strong>【伝説を破る科学の弾丸】</strong><br>
-            ホームズが導き出した結論は、「魔犬の呪い」を利用してバスカヴィル家の莫大な遺産を独占しようとする、身内による極めて計画的かつ冷酷な殺人劇であった。犯人は本物の巨大な猟犬を隠れて飼育し、暗闇で光る「燐（りん）」をその身体に塗ることで、目撃者に恐るべき魔犬の幻想を植え付けていたのだ。濃霧が立ち込める決戦の夜、不気味に発光しながらヘンリー卿に襲いかかる巨大な怪物。しかし、ホームズとワトソンの放った科学の弾丸が、伝説の化け物をただの肉体を持った獣へと引きずり下ろし、暗黒の荒野に夜明けをもたらす。</p>
-        </div>
-        <a href="./index.html" class="back-button">&lt; BACK TO MAIN</a>
-    </section>
-
-</div>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="./index.html#" class="nav-link px-2 text-white text-center">
+                    Home
+                </a>
+            </li> 
+        </ul>
+        <p class="text-white text-center">
+            Sherlock Homes
+        </p>
+    </footer>
     
 </body>
 </html>
