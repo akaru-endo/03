@@ -128,6 +128,8 @@ section {
   height: 100vh;
   z-index: 2; 
 }
+
+
 /*------------------1つ目----------------*/
 .hero-title {
   font-size: 5vw;
@@ -179,6 +181,17 @@ section {
   }
 }
 
+.intro-title {
+  margin: 0;
+  padding: 200px 0 0px;
+}
+.title-content{
+  margin: 0;
+  font-size: 2.0rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
 /*-----------------2つ目-------------------*/
 .section-2 {
   position: relative;
@@ -186,27 +199,13 @@ section {
   color: #ffffff;
   z-index: 1;
   font-size: 2.0rem;
+  overflow: visible;
 }
 .document-container {
   max-width: 760px;
   margin: 0 auto;
   padding: 0 30px;
   position: relative;
-}
-.uppercase-label {
-  display: block;
-  font-size: 0.85rem;
-  color: #00ffcc;
-  letter-spacing: 0.4em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.intro-title {
-  font-size: 2.4rem;
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  text-align: center;
-  margin-bottom: 100px;
 }
 .intro-text p, .detailed-paragraph {
   font-size: 1.05rem;
@@ -228,20 +227,42 @@ section {
 .intro-quote span {
   font-size: 1.0rem;
 }
-/*-----------------3つ目------------------*/
+.document-layout{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+}
+.document-container{
+    flex: 1;
+    max-width: 760px;
+}
+.portrait-container{
+    position: sticky;
+    top: 120px;
+    width: 320px;
+    padding: 0 40px 0 0;
+    align-self: flex-start;
+}
+.portrait{
+    width:100%;
+    display: block;
+}-------------3つ目------------------*/
 .section-3-gallery {
   padding: 15vh 0;
   color: #ffffff;
   text-align: center;
 }
-.sec3-container, .sec4-container, .sec5-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
 .cases-grid {
   display: flex;
   gap: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 40px;
 }
 .case-card {
   flex: 1;
@@ -251,24 +272,10 @@ section {
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
-.case-status {
-  display: inline-block;
-  font-size: 0.65rem;
-  background-color: rgba(0, 255, 204, 0.1);
-  color: #00ffcc;
-  padding: 3px 8px;
-  letter-spacing: 0.1em;
-  margin-bottom: 25px;
-}
 .case-name {
   font-size: 1.3rem;
   margin-bottom: 8px;
   font-family: "YuMincho", serif;
-}
-.case-meta {
-  font-size: 0.8rem;
-  color: #666e80;
-  margin-bottom: 20px;
 }
 .case-desc {
   font-size: 0.9rem;
@@ -276,6 +283,7 @@ section {
   color: #a0a5b5;
 }
 .case-card:hover {
+  color: #00ffcc;
   transform: translateY(-10px);
   border-color: #00ffcc;
   box-shadow: 0 10px 30px rgba(0, 255, 204, 0.1);
